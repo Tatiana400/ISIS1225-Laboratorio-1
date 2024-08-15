@@ -94,7 +94,14 @@ def load_books_tags(control, filename):
     de tags. Siga el mismo procedimiento que en la carga de libros.
     """
     # TODO: Mods Lab 1, integrar vista y logica
-    pass
+    book_tags = app.get(book_tags)
+    book_tagsfile = os.path.join(data_dir, filename)
+    app[book_tags] = set.load_set(book_tags, book_tagsfile)
+    if set.is_empty("book_tags"):
+        return None
+    else:
+        return set.size(book_tags)
+    
 
 # Funciones de consulta
 
