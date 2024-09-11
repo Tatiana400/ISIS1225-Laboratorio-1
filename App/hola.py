@@ -21,8 +21,4 @@ def two_sum(lst, target):
 
     return existe
 
-l = [1, 4, 8, 10, 6] 
-t = 13
-print(two_sum(l,t))
-
 
